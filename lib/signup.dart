@@ -26,7 +26,7 @@ class _SignUpState extends State<SignUp> {
         Align(
           alignment: Alignment.topLeft,
           child: Padding(
-            padding: const EdgeInsets.only(left: 27),
+            padding: const EdgeInsets.only(left: 29),
             child: Text('Username'),
           )),
         Container(

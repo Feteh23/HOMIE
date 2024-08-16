@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:homie/dashboard.dart';
 import 'package:homie/signup.dart';
 import 'package:homie/resetpassword.dart';
@@ -13,6 +14,7 @@ class Welcome extends StatefulWidget {
 
 class _WelcomeState extends State<Welcome> {
  bool _ischecked = false; 
+ bool _isobscured = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,6 +64,7 @@ class _WelcomeState extends State<Welcome> {
             padding: const EdgeInsets.only(left: 25),
             child: Text('Password'),
           )),
+
         Container(
         height: 40,
         width: 305,
@@ -73,15 +76,28 @@ class _WelcomeState extends State<Welcome> {
          borderRadius: BorderRadius.circular(10),
         ),
         child: Padding(
-          padding: const EdgeInsets.only(top: 20),
-          child: Padding(
-            padding: const EdgeInsets.only(left: 25),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: '************',
-                 border: InputBorder.none,
+          padding: const EdgeInsets.only(left: 25, ),
+          child: Row(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 4),
+                  child: TextField(
+                    obscureText: _ischecked,
+                    decoration: InputDecoration(
+                      hintText: '************',
+                       border: InputBorder.none,
+                    ),
+                  ),
+                ),
               ),
-            ),
+               SizedBox(width: 100,),
+                  IconButton(onPressed: (){
+                    setState(() {
+                      _ischecked = !_ischecked;
+                    });
+                  }, icon: Icon(_ischecked? Icons.visibility_off : Icons.visibility)),
+            ],
           ),
         ),
         ),
@@ -108,10 +124,10 @@ alignment: Alignment.topRight,
             children: [
               IconButton(onPressed: (){
                 setState(() {
-                 _ischecked = !_ischecked;
+                 _isobscured = !_isobscured;
                 });
                
-             }, icon:Icon(_ischecked? Icons.check_box : Icons.check_box_outline_blank, color: _ischecked? Colors.blue: Colors.grey,)),
+             }, icon:Icon(_isobscured? Icons.check_box : Icons.check_box_outline_blank, color: _ischecked? Colors.blue: Colors.grey,)),
               Padding(
                 padding: const EdgeInsets.only(left: 18),
                 child: Text('Remember Me'),

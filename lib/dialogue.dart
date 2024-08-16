@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Dialogue extends StatelessWidget {
   const Dialogue({super.key});
@@ -151,24 +152,35 @@ class Dialogue extends StatelessWidget {
            SizedBox(height: 100,),
            Padding(
              padding: const EdgeInsets.only( left: 20, right: 20),
-             child: Container(
-              height: 30,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.grey[400],
-                borderRadius: BorderRadius.circular(35),
-              ),
-              child: Row(
-                children: [
-                  TextField(
-                    decoration: InputDecoration(
-                      hintText: 'type something......',
-                    ),
-                  ),
-                  SizedBox(width: 55,),
-                  Icon(Icons.message),
-                ],
-              ),
+             child: Row(
+               children: [
+                 Row(
+                   children: [
+                     Expanded(
+                       child: Container(
+                        height: 30,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: Colors.grey[400],
+                          borderRadius: BorderRadius.circular(35),
+                        ),
+                        child: Row(
+                          children: [
+                            TextField(
+                              decoration: InputDecoration(
+                                hintText: 'type something......',
+                              ),
+                            ),
+                            SizedBox(width: 55,),
+                            Icon(Icons.send_sharp, color: Colors.blue,),
+                          ],
+                        ),
+                       ),
+                     ),
+                   ],
+                 ),
+                 Icon(Icons.emoji_emotions),
+               ],
              ),
            ),
            //SizedBox(width: 8,),

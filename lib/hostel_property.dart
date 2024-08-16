@@ -45,6 +45,7 @@ class _HostelPropertyState extends State<HostelProperty> {
                             borderRadius: BorderRadius.circular(30)
                           ),
                           
+                          
                           child: const Icon(Icons.arrow_back_rounded, size: 15,)),
                         const SizedBox(width: 70,),
                         const Text('Hostel Property')
@@ -155,13 +156,17 @@ class _HostelPropertyState extends State<HostelProperty> {
                                           ),
                                         ),
                                  Padding(
-                                   padding: const EdgeInsets.only(right:10 , top: 30),
+                                   padding: const EdgeInsets.only(right:8 , top: 35),
                                    child: Container(
                                    decoration: const BoxDecoration(
-                                    color: Colors.orange,
+                                    color: Color.fromARGB(255, 255, 115, 0),
                                     borderRadius: BorderRadiusDirectional.all(Radius.circular(3)),
                                    ),
-                                    child: const Text('Book Now', style: TextStyle(color: Colors.white),)
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(right: 4, left: 4),
+                                      child: const Text('Book Now', style: TextStyle(color: Colors.white),),
+                                    )
+
                                     ),
                                  )
                                           ],
@@ -177,7 +182,7 @@ class _HostelPropertyState extends State<HostelProperty> {
                       Padding(
                         padding: const EdgeInsets.only(left:15 , right:15 ),
                         child: Container(
-                                      height: 70,
+                                      height: 80,
                                       decoration: BoxDecoration(
                                         border: Border.all(
                                           color: Colors.blue,
@@ -214,17 +219,21 @@ class _HostelPropertyState extends State<HostelProperty> {
                                             ),
                                           ),
                                    Padding(
-                                     padding: const EdgeInsets.only(right:10 , top: 30),
+                                     padding: const EdgeInsets.only(right:8, top: 35),
                                      child: Container(
                                      decoration: const BoxDecoration(
-                                      color: Colors.orange,
+                                      color: Color.fromARGB(255, 255, 119, 1),
                                       borderRadius: BorderRadiusDirectional.all(Radius.circular(3)),
                                      ),
-                                      child: const Text('Book Now', style: TextStyle(color: Colors.white),)
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(right:4 , left: 4),
+                                        child: const Text('Book Now', style: TextStyle(color: Colors.white),),
+                                      )
                                       ),
                                    )
                                             ],
                                         
+
                                        
                                         
                                       ),
@@ -378,13 +387,16 @@ class _HostelPropertyState extends State<HostelProperty> {
                                         ),
                                       ),
                                Padding(
-                                 padding: const EdgeInsets.only(right:10 , top: 30),
+                                 padding: const EdgeInsets.only(right:8, top: 35),
                                  child: Container(
                                  decoration: const BoxDecoration(
-                                  color: Colors.orange,
+                                  color: Color.fromARGB(255, 223, 90, 7),
                                   borderRadius: BorderRadiusDirectional.all(Radius.circular(3)),
                                  ),
-                                  child: const Text('Book Now', style: TextStyle(color: Colors.white),)
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 4, right:4 ),
+                                    child: const Text('Book Now', style: TextStyle(color: Colors.white),),
+                                  )
                                   ),
                                )
                                         ],
@@ -437,13 +449,16 @@ class _HostelPropertyState extends State<HostelProperty> {
                                           ),
                                         ),
                                  Padding(
-                                   padding: const EdgeInsets.only(right:10 , top: 30),
+                                   padding: const EdgeInsets.only(right:8 , top: 35),
                                    child: Container(
                                    decoration: const BoxDecoration(
-                                    color: Colors.orange,
+                                    color: Color.fromARGB(255, 250, 97, 2),
                                     borderRadius: BorderRadiusDirectional.all(Radius.circular(3)),
                                    ),
-                                    child: const Text('Book Now', style: TextStyle(color: Colors.white),)
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(right: 4, left: 4),
+                                      child: const Text('Book Now', style: TextStyle(color: Colors.white),),
+                                    )
                                     ),
                                  )
                                           ],

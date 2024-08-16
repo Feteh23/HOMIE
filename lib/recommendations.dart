@@ -202,7 +202,14 @@ class _MyWidgetState extends State<Recommendations> {
                       Column(
                         children: [
                          Stack (children:
-                         [Image.asset('assets/House1.png', height: 200, width: 200,),
+                         [GestureDetector(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder:(context) => HostelProperty()));
+                          },
+                          child:  Image.asset('assets/House1.png', height: 200, width: 200,),
+                         ),
+                          
+                         
                          
                         Padding(
                               padding: const EdgeInsets.only(left: 105, top:35),
@@ -296,7 +303,14 @@ class _MyWidgetState extends State<Recommendations> {
                       Column(
                         children: [
                           Stack(children: [
-                            Image.asset('assets/House1.png', height: 200, width: 200,),
+                            GestureDetector(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder:(context) => HostelProperty()));
+                          },
+                          child:    Image.asset('assets/House1.png', height: 200, width: 200,),
+                         ),
+                          
+                          
                               Padding(
                               padding: const EdgeInsets.only(left: 105, top:35),
                               child: Container(
@@ -322,7 +336,13 @@ class _MyWidgetState extends State<Recommendations> {
                       Column(
                         children: [
                           Stack(children: [
-                            Image.asset('assets/House2.png', height: 200, width: 200,),
+                             GestureDetector(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder:(context) => HostelProperty()));
+                          },
+                          child:     Image.asset('assets/House2.png', height: 200, width: 200,),
+                         ),
+                           
                              Padding(
                               padding: const EdgeInsets.only(left: 105, top:35),
                               child: Container(
@@ -368,7 +388,14 @@ class _MyWidgetState extends State<Recommendations> {
               scrollDirection: Axis.vertical,
               child: Column(
                 children: [
-                  Image.asset('assets/House3.png', height: 200, width: 400,),
+                   GestureDetector(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder:(context) => HostelProperty()));
+                          },
+                          child:      Image.asset('assets/House3.png', height: 200, width: 400,),
+                         ),
+                           
+                 
               Container(
                 child: Column(
                   children: [

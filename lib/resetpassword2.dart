@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:homie/welcome.dart';
 
-class ResetPassword2 extends StatelessWidget {
+class ResetPassword2 extends StatefulWidget {
   const ResetPassword2({super.key});
 
+  @override
+  State<ResetPassword2> createState() => _ResetPassword2State();
+}
+
+class _ResetPassword2State extends State<ResetPassword2> {
+  bool _ischecked = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,12 +66,28 @@ class ResetPassword2 extends StatelessWidget {
          borderRadius: BorderRadius.circular(10),
         ),
         child: Padding(
-          padding: const EdgeInsets.only(top: 18, left: 25),
-          child: TextField(
-            decoration: InputDecoration(
-              hintText: '************',
-              border: InputBorder.none, 
-            ),
+          padding: const EdgeInsets.only(top:1, left: 25),
+          child: Row(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 5),
+                  child: TextField(
+                    obscureText: _ischecked,
+                    decoration: InputDecoration(
+                      hintText: '************',
+                      border: InputBorder.none, 
+                    ),
+                  ),
+                ),
+              ),
+                             SizedBox(width: 100,),
+                  IconButton(onPressed: (){
+                    setState(() {
+                      _ischecked = !_ischecked;
+                    });
+                  }, icon: Icon(_ischecked? Icons.visibility_off : Icons.visibility)),
+            ],
           ),
         ),
         ),
